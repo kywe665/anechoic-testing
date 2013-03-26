@@ -1,8 +1,8 @@
 %spectrum analyzer
 close all;
 clear all;
-[X Fs nbits] = wavread('audiocheck.net_hdchirp_96k_-3dBFS_log.wav');
-X = X(:,1);
+% [X Fs nbits] = wavread('audiocheck.net_hdchirp_96k_-3dBFS_log.wav');
+% X = X(:,1);
 
 Tfinal = 10;
 Fs = 48000;
