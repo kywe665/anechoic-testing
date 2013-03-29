@@ -132,14 +132,16 @@ end
 %%%%%%%%%%%%%%%%%%%%%%
 figure(1);
 plot(t_thinCenterLow, x_thinCenterLow, t_mediumCenterLow, x_mediumCenterLow, t_thickCenterLow, x_thickCenterLow);
+set(gca,'FontSize',16);
 title('Center Low: Thin-blue, Med-green, Thick-red');
 xlabel('Frequency(Hz)');
 ylabel('Magnitude(dB)');
 grid on;
 figure(2);
 plot(t_thinCenterFull, x_thinCenterFull, t_mediumCenterFull, x_mediumCenterFull, t_thickCenterFull, x_thickCenterFull);
+set(gca,'FontSize',16);
 title('Center Full: Thin-blue, Med-green, Thick-red');
-xlabel('Frequency(kHz)');
+xlabel('Frequency(Hz)');
 ylabel('Magnitude(dB)');
 grid on;
 %%%%%%%%%
@@ -153,22 +155,25 @@ ylabel('Magnitude(dB)');
 grid on;
 figure(4);
 plot(t_thinBackFull, x_thinBackFull, t_mediumBackFull, x_mediumBackFull, t_thickBackFull, x_thickBackFull);
+set(gca,'FontSize',16);
 title('Back Full: Thin-blue, Med-green, Thick-red');
-xlabel('Frequency(kHz)');
+xlabel('Frequency(Hz)');
 ylabel('Magnitude(dB)');
 grid on;
 %%%%%%%%%
 % From the side
 %%%%%%%%%
 figure(5);
-plot(t_thinSideLow, x_thinSideLow, t_mediumSideLow, x_mediumSideLow, t_thickSideLow, x_thickSideLow);
+plot(t_thinSideLow, x_thinSideLow-x_thickSideLow, t_mediumSideLow, x_mediumSideLow-x_thickSideLow, t_thickSideLow, x_thickSideLow-x_thickSideLow);
+set(gca,'FontSize',16);
 title('Side Low: Thin-blue, Med-green, Thick-red');
 xlabel('Frequency(Hz)');
 ylabel('Magnitude(dB)');
 grid on;
 figure(6);
-plot(t_thinSideFull, x_thinSideFull, t_mediumSideFull, x_mediumSideFull, t_thickSideFull, x_thickSideFull);
+plot(t_thinSideFull, x_thinSideFull-x_thickSideFull, t_mediumSideFull, x_mediumSideFull-x_thickSideFull, t_thickSideFull, x_thickSideFull-x_thickSideFull);
+set(gca,'FontSize',16);
 title('Side Full: Thin-blue, Med-green, Thick-red');
-xlabel('Frequency(kHz)');
+xlabel('Frequency(Hz)');
 ylabel('Magnitude(dB)');
 grid on;
